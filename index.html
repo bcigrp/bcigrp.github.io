@@ -60,18 +60,29 @@
 <script>
 
     $(document).ready(function(){
-        var carImgWidth  = $("#carImg").width();
-        var carImgHeight = $("#carImg").height();
 
-        var divWidth  = $("#carImg").parent().width();
-        var divHeight = $("#carImg").parent().height();
 
-        var carPointX = (divWidth - carImgWidth)/2 + 140 * carImgWidth / 326 - 28;
-        var carPointY = 150 * carImgHeight / 292;
+        var newImg = new Image();
+        newImg.onload = function(){
+            var height = newImg.height;
 
-        $("#aniico").css("left",carPointX);
-        $("#aniico").css("top",carPointY);
+            var carImgWidth  = $("#carImg").width();
+            var carImgHeight = height;
+
+            var divWidth  = $("#carImg").parent().width();
+            var divHeight = $("#carImg").parent().height();
+
+            var carPointX = (divWidth - carImgWidth)/2 + 140 * carImgWidth / 326 - 28;
+            var carPointY = 150 * carImgHeight / 292;
+
+            $("#aniico").css("left",carPointX);
+            $("#aniico").css("top",carPointY);
+        };
+        newImg.src = "img/cs_car_ico.png";
     });
+
+
+
 
 
 
