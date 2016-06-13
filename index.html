@@ -1,38 +1,80 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>BCI博盛实业</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 可选的Bootstrap主题文件（一般不使用） -->
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"/>-->
+    <!--<link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
+
+    <link href="css/cs.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>博盛实业</title>
 </head>
-
-<body id="home">
-<section class="main">
-    <div id="Content" class="wrapper topSection">
-        <br><br><br><br>
-        <div id="Header">
-            <div class="wrapper">
-                <div class="logo"><img src="images/logo.png" /></div>
+<body class="coming_bg">
+<div class="container">
+    <div class="row cs_header">
+        <div class="col-md-12">
+            <img src="img/cs_title.png" class="img-responsive center-block">
+        </div>
+    </div>
+    <div class="row cs_tel">
+        <div class="col-md-12">
+            <a href="tel:400-100-5899"><img src="img/cs_tel_ico.png" class="img-responsive center-block"></a>
+        </div>
+    </div>
+    <div class="row cs_context">
+        <div class="col-md-12">
+            仓储／物流／销售／工业品供应链服务的供应商<br>
+            现代服务业产业平台
+        </div>
+    </div>
+    <div class="row cs_qrCode">
+        <div class="col-md-12">
+            <img src="img/cs_qr_img.png" class="img-responsive center-block">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <img src="img/cs_car_ico.png" class="img-responsive center-block" id="carImg">
+            <div id="aniico">
+                <img src="img/cs_car_aniico.png" class="animated swing">
             </div>
-        </div>
-        <br><br><br>
-        <h2>网站建设中.</h2>
-        <h2>We are coming soon.</h2>
-    </div>
-</section>
 
-<footer class="copyright">
-    <div class="container">
-        <div class="navbar-header" style="text-align: left">
-            <img src="images/copyrightName.gif">
-            <p>Copyright © 2016 BOSHENG CHINA Co.,Ltd. All Rights Reserved. 天津博盛信达实业有限公司 版权所有</p>
         </div>
     </div>
-</footer>
-
-<!--Scripts-->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="cs_text text-center">网站建设中</h3>
+        </div>
+    </div>
+</div>
 </body>
+<script>
+
+    $(document).ready(function(){
+        var carImgWidth  = $("#carImg").width();
+        var carImgHeight = $("#carImg").height();
+
+        var divWidth  = $("#carImg").parent().width();
+        var divHeight = $("#carImg").parent().height();
+
+        var carPointX = (divWidth - carImgWidth)/2 + 140 * carImgWidth / 326 - 28;
+        var carPointY = 150 * carImgHeight / 292;
+
+        $("#aniico").css("left",carPointX);
+        $("#aniico").css("top",carPointY);
+    });
+
+
+
+//    $("#aniico").addClass('animated swing');
+</script>
 </html>
